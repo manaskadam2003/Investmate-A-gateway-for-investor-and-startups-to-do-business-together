@@ -1,0 +1,117 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="..PDAD/investorLogin/">
+
+    <title>Delete Project</title>
+</head>
+
+<body>
+
+    <div class="nvbr">
+        <nav>
+            <div class="logo">
+                <h1>InvestMate</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="register.php">For Makers</a></li>
+                <li><a href="../investorLogin/register.php">For Investors</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2>Which Project Do You Want To Delete ?</h2>
+ 
+    <a href="deleteProject.php?project_name=<?php echo $projectName; ?>"><button>DELETE</button></a>
+
+
+</body>
+
+</html>">
+
+    <title>Delete Project</title>
+</head>
+
+<body>
+
+    <div class="nvbr">
+        <nav>
+            <div class="logo">
+                <h1>InvestMate</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="register.php">For Makers</a></li>
+                <li><a href="../investorLogin/register.php">For Investors</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2>Which Project Do You Want To Delete ?</h2>
+    <div class="dropdown">
+        <select>
+            <?php
+
+            $query = "SELECT project_name FROM users";
+            $result = mysqli_query($conn, $query);
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                $projectName = $row['project_name'];
+                echo "<option value='$projectName'>$projectName</option>";
+            }
+            mysqli_close($conn);
+            ?>
+        </select>
+    </div>
+
+    <a href="deleteProject.php?project_name=<?php echo $projectName; ?>"><button>DELETE</button></a>
+
+
+</body>
+
+</html>">
+
+    <title>Delete Project</title>
+</head>
+
+<body>
+
+    <div class="nvbr">
+        <nav>
+            <div class="logo">
+                <h1>InvestMate</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="register.php">For Makers</a></li>
+                <li><a href="../investorLogin/register.php">For Investors</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2>Which Project Do You Want To Delete ?</h2>
+   
+    <a href="deleteProject.php?project_name=<?php echo $projectName; ?>"><button>DELETE</button></a>
+
+
+</body>
+
+</html>
